@@ -1,0 +1,99 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #e2e8f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(120px, auto) repeat(5, 1fr);
+  gap: 0.5rem;
+  background-color: #334155;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: #1a202c;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 1rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  border-radius: 0.75rem;
+  min-height: 100px;
+}
+
+.output .previous-operand {
+  color: #cbd5e1;
+  font-size: 1.5rem;
+  opacity: 0.7;
+  text-align: right;
+}
+
+.output .current-operand {
+  color: #f8fafc;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: right;
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  background-color: #475569;
+  color: #f8fafc;
+  padding: 1rem 0.5rem;
+  border-radius: 0.75rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-grid > button:hover {
+  background-color: #64748b;
+  transform: translateY(-2px);
+}
+
+.calculator-grid > button:active {
+  background-color: #334155;
+  transform: translateY(0);
+}
+
+.span-two {
+  grid-column: span 2;
+  background-color: #ef4444;
+}
+.span-two:hover {
+  background-color: #dc2626;
+}
+
+.operation-button {
+  background-color: #f97316;
+}
+
+.operation-button:hover {
+  background-color: #ea580c;
+}
+
+.equals-button {
+  background-color: #22c55e;
+}
+
+.equals-button:hover {
+  background-color: #16a34a;
+}
